@@ -81,6 +81,19 @@ const NavBar = () => {
               Search
             </Nav.Link>
             <Nav.Link
+                href="/chatbot"
+                style={{
+                  color: '#ffffff',
+                  fontSize: '1.1em',
+                  padding: '8px 15px',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.target.style.color = '#ffab76')}
+                onMouseLeave={(e) => (e.target.style.color = '#ffffff')}
+              >
+                RecipeChatbot
+              </Nav.Link> 
+            <Nav.Link
               href="/admin"
               style={{
                 color: '#ffffff',
@@ -93,19 +106,7 @@ const NavBar = () => {
             >
               Admin
             </Nav.Link>
-              {/* <Nav.Link
-                href="/signup"
-                style={{
-                  color: '#ffffff',
-                  fontSize: '1.1em',
-                  padding: '8px 15px',
-                  transition: 'all 0.3s ease',
-                }}
-                onMouseEnter={(e) => (e.target.style.color = '#ffab76')}
-                onMouseLeave={(e) => (e.target.style.color = '#ffffff')}
-              >
-                Signup
-              </Nav.Link> */}
+             
             {user ? (
               <NavDropdown
                 title={
@@ -120,8 +121,8 @@ const NavBar = () => {
                   transition: 'all 0.3s ease',
                 }}
               >
-                {/*<NavDropdown.Item
-                  href="/wishlist"
+               {/* <NavDropdown.Item
+                  href="/chatbot"
                   style={{
                     backgroundColor: '#121212',
                     color: '#ff7b54',
@@ -130,10 +131,10 @@ const NavBar = () => {
                   onMouseEnter={(e) => (e.target.style.color = '#ffab76')}
                   onMouseLeave={(e) => (e.target.style.color = '#ff7b54')}
                 >
-                  WishList
-                </NavDropdown.Item>
+                  RecipeChatbot
+                </NavDropdown.Item> */}
 
-                */}
+                
                 <NavDropdown.Item
                   onClick={handleLogout}
                   style={{

@@ -13,6 +13,7 @@ import AdminLogin from './admin/AdminLogin';
 import AdminSignup from './admin/AdminSignup';
 import Dashboard from './admin/dashboard';
 import Wishlist from './Wishlist';
+import RecipeChatbot from './RecipeChatbot'; // Import RecipeChatbot component
 
 const theme = createTheme({
   palette: {
@@ -36,7 +37,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* Simplified div without any className or styling */}
       <div>
         {/* Conditionally render Nav based on the current route */}
         {!noNavRoutes.includes(location.pathname) && <Nav />} {/* Add Logout button here */}
@@ -54,6 +54,7 @@ function App() {
             <Search /> {/* Protected Search Route */}
           </ProtectedRoute>
         } />
+        <Route path="/chatbot" element={<RecipeChatbot />} /> {/* New route for RecipeChatbot */}
       </Routes>
     </ThemeProvider>
   );
