@@ -13,7 +13,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/signup', { username, email, password });
+      await axios.post('https://recipe-finder-backend-cw2w.onrender.com/api/signup', { username, email, password });
       navigate('/otp', { state: { email } }); // Pass email to OTP verification
     } catch (err) {
       setError(err.response.data.message);

@@ -21,7 +21,7 @@ const AdminLogin = () => {
     e.preventDefault();
     
     try {
-      const res = await axios.post('http://localhost:5000/admin/login', formData);
+      const res = await axios.post('https://recipe-finder-backend-cw2w.onrender.com/admin/login', formData);
       navigate('/dash');
     } catch (err) {
       setMessage(err.response.data.message || 'Server error');

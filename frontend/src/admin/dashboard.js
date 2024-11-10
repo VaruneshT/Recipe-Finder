@@ -39,7 +39,7 @@ const RecipeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/recipes', formData);
+      const res = await axios.post('https://recipe-finder-backend-cw2w.onrender.com/recipes', formData);
       setMessage(res?.data?.message || 'Recipe saved successfully!');
     } catch (err) {
       setMessage(err?.response?.data?.message || 'Error saving recipe');

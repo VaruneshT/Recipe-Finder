@@ -22,7 +22,7 @@ const Search = () => {
       }));
   
       // Fetch MongoDB recipes with a query filter
-      const response = await axios.get(`http://localhost:5000/recipes`, {
+      const response = await axios.get(`https://recipe-finder-backend-cw2w.onrender.com/recipes`, {
         params: { label: query }  // Pass the query as 'label'
       });
       const mongoData = response.data.map(recipe => ({
